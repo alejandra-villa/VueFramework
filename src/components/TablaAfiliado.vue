@@ -18,7 +18,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="afiliado in afiliados" :key="afiliado.id">
+                <tr v-for="afiliado in afiliado" :key="afiliado.id">
                     <td>{{ afiliado.id }}</td>
                     <td>{{ afiliado.documento }}</td>
                     <td>{{ afiliado.nombres }}</td>
@@ -36,7 +36,7 @@
         </table>
     </div>
 </template>
-
+ 
 <script>
 import axios from "axios";
 
@@ -44,14 +44,14 @@ export default {
 
     data() {
         return {
-            afiliados: [],
+            afiliado: [],
         };
     },
     methods: {
         obtenerAfiliados() {
             axios.get("http://localhost:8080/api/afiliado/listar")
             .then((response) => {
-                this.afiliados = response.data;
+                this.afiliado = response.data;
             })
             .catch((error) => {
                 console.error("Erros al obtener afiliados:", error);

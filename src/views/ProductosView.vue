@@ -1,62 +1,58 @@
 <template>
-    <div class="afiliado"> 
+    <div class="productos">
         <div class="components">
-            <FormularioAfiliado/>
-            <TablaAfiliado/>
+            <FormularioProducto/>
+            <TablaProducto/>
         </div>
     </div>
 </template>
 
 <script>
-import FormularioAfiliado from '@/components/FormularioAfiliado.vue';
-import TablaAfiliado from '@/components/TablaAfiliado.vue';
+
+import FormularioProducto from '@/components/FormularioProducto.vue';
+import TablaProducto from '@/components/TablaProducto.vue';
 
 export default {
-    name: 'AfiliadoView',
-    components: {
-        FormularioAfiliado,
-        TablaAfiliado
-    }
+    name: 'ProductosView',
+    components : {
+    FormularioProducto,
+    TablaProducto
 }
+}
+
 </script>
 
 <style>
-.contenedor {
+
+.components {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+   grid-auto-rows: 1fr;
+}
+.cuerpo {
     font-family: Poppins, sans-serif;
     background-color: fff;
     margin: 0;
     padding: 0;
 }
 
-.components{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-   grid-auto-rows: 1fr;
-
-}
-.container {
-   /* max-width: 400px;*/
-    margin:1rem;
-    padding: 1rem;
+.producto-form {
+    margin: 2%;
+    padding: 2%;
     background-color: whitesmoke;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-group {
+.form-pr {
     margin-bottom: 15px;
 }
 
-form{
-
+form {
     padding: 2%;
-    
 }
+
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -64,10 +60,11 @@ label {
 }
 
 input {
-    width: 100%;
+    width: 95%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    margin: 1px;
 }
 
 button {
@@ -79,6 +76,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 1%;
 }
 
 button:hover {

@@ -1,15 +1,16 @@
 <template>
   <nav>
     <router-link to="/">Inicio</router-link> |
-    <router-link to="/about">Sobre Nosotros</router-link> |
-    <router-link to="/afiliados">Afiliado</router-link>
+    <router-link to="/afiliados">Afiliado</router-link> |
+    <router-link to="/productos">Productos</router-link> |
+    <router-link to="/login">Iniciar Sesión</router-link> 
   </nav>
   <router-view/>
 </template> 
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -22,10 +23,12 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
-}
+  color: #000000;
+  text-decoration-line: none;
+} 
+
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: rgb(73, 95, 98);
 }
 </style>

@@ -4,7 +4,7 @@
         <form class="afiliado-form" @submit.prevent="guardar">
             <div class="form-group">
                 <label for="id">ID: </label>
-                <input type="number" id="id" name="id" required v-model="id"/>
+                <input type="number" id="id" name="id" v-model="id"/>
             </div>
             <div class="form-group">
                 <label for="documento">Documento: </label>
@@ -44,7 +44,7 @@
             <button type="button" id="actualizar" name="actualizar" @click="actualizar">Actualizar</button><br/>
             <button type="button" id="consultar" name="consultar" @click="consultar">Consultar</button><br/>
 
-        </form>
+        </form> 
     </div>
 </template>
 
@@ -83,7 +83,7 @@ export default {
             })
             .then((response) => {
                 console.log("Registro exitoso: ", response.data);
-                alert("exito");
+                alert("Registro exitoso.");
                 this.id = '';
                 this.documento = '';
                 this.nombres = '';
@@ -108,6 +108,7 @@ export default {
                     this.edad = response.data.edad;
                     this.telefono = response.data.telefono;
                     this.correo = response.data.correo;
+                    this.direccion = response.data.direccion;
                     this.beneficiarios = response.data.beneficiarios;
             })
             .catch((error) => {
